@@ -14,11 +14,18 @@ module.exports = {
     './src/pages/Home.js',
     './src/pages/Basket.js'
 
-
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'ph': '330px',
+        'sm-480': '480px',
+        'md-860': '860px',
+        'lg-1100': '1100px',
+
+      },
+    },
     pseudo: { // defaults to {'before': 'before', 'after': 'after'}
       'before': 'before',
       'after': 'after',
@@ -26,11 +33,11 @@ module.exports = {
     }
   },
   variants: {
-    extend: {},
+    extend: {
+
+    },
   },
   plugins: [
-    require('tailwindcss-pseudo')({
-      empty: true, // defaults to true
-    })
+    require('tailwind-scrollbar-hide'),
   ],
 }

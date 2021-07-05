@@ -1,4 +1,4 @@
-import { ADD_PIZZA_TO_BASKET, CLEAR_BASKET, REMOVE_BASKET_ITEM } from "../reducers/basket";
+import { ADD_PIZZA_TO_BASKET, CLEAR_BASKET, MINUS_PIZZA, PLUS_PIZZA, REMOVE_BASKET_ITEM } from "../reducers/basket";
 
 export const addPizzaToBasket = (pizzaObj) => ({
   type: ADD_PIZZA_TO_BASKET,
@@ -11,5 +11,15 @@ export const clearBasket = () => ({
 
 export const removePizzaLine = (id) => ({
   type: REMOVE_BASKET_ITEM,
+  payload: id
+})
+
+export const minusPizza = (id) => ({
+  type: MINUS_PIZZA,
+  payload: id
+})
+
+export const plusPizza = (id) => ({
+  type: PLUS_PIZZA,
   payload: id
 })

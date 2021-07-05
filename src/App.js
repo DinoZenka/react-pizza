@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div className="px-4">
-      <div className="max-w-screen-xl px-8 py-4 mx-auto bg-white rounded-lg">
+      <div className="max-w-screen-xl px-3 py-4 mx-auto bg-white rounded-lg sm-480:px-8">
         <Header />
         <Route exact path='/' component={Home} />
         <Route exact path='/basket' component={Basket} />

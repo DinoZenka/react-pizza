@@ -24,7 +24,7 @@ const PizzaItem = ({ id, imageUrl, name, sizes, price, types, onAddPizza, count 
   }
 
   return (
-    <div className='flex flex-col px-2 pt-3 mx-2 my-4 text-center duration-300 mx:px-4 hover:shadow-2xl hover:transform hover:scale-105 hover:duration-300 rounded-xl'>
+    <div className='flex flex-col px-2 pt-3 mx-2 my-4 text-center duration-300 hover:shadow-2xl hover:transform hover:scale-105 hover:duration-300 rounded-xl'>
       <img width='80%' height='auto' src={imageUrl} alt='pizza name' className='mx-auto'></img>
       <p className='my-4 font-bold'>{name}</p>
       <div className='w-full bg-[#F3F3F3] rounded-lg p-2 '>

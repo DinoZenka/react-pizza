@@ -14,14 +14,16 @@ const Header = () => {
       <div className='flex justify-between py-4'>
         <Link to='/' className='flex'>
           <div>
-            <img src={logo} className='flex-shrink-0 mt-2' alt='img: logo' />
+            <img src={logo} className='flex-shrink-0 mt-2 sm-480:mt-4 sm:mt-0' alt='img: logo' />
           </div>
-          <div className='ml-4'>
-            <h1 className='text-xl font-bold uppercase'>
-              react pizza
+          <div className='mt-0 ml-4 sm:mt-2'>
+            <h1 className='flex flex-col text-xl font-bold uppercase sm-480:flex-row'>
+              <p>react</p>
+              <p>pizza</p>
             </h1>
-            <div className='text-gray-700'>
-              самая вкусная пицца во вселенной
+            <div className='flex-col hidden text-gray-700 sm:flex-row sm-480:flex'>
+              <p>самая вкусная пицца</p>
+              <p> во вселенной</p>
             </div>
           </div>
         </Link>

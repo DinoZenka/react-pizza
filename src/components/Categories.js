@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const Categories = React.memo(({ categoryIndex, categories, setActiveCategory }) => {
 
   return (
-    <div className='categories'>
+    <div className='overflow-x-scroll categories scrollbar-hide'>
       <ul >
         <li className={categoryIndex == null ? 'active' : ''} onClick={() => setActiveCategory(null)}>Все</li>
         {categories.map((elem, ind) => (

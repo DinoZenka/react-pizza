@@ -27,8 +27,8 @@ const SortPopup = React.memo((props) => {
   });
 
   return (
-    <div ref={sertRef} className='relative flex items-center w-64'>
-      <span>
+    <div ref={sertRef} className='relative flex items-center mt-8 w-68 lg-1100:mt-0'>
+      <span >
         {visiblePopup ? <FaCaretDown /> : <FaCaretUp />}
       </span>
       <p className='ml-1 mr-2'>Сортировка по:</p>

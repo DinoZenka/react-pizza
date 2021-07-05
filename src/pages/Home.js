@@ -41,13 +41,14 @@ function Home() {
   const onAddPizza = (obj) => {
     dispatch(addPizzaToBasket(obj));
   }
+
   React.useEffect(() => {
     dispatch(fetchPizzas(category, sortBy));
   }, [category, sortBy]);
 
   return (
     <>
-      <div className='flex justify-between'>
+      <div className='flex flex-col justify-between lg-1100:flex-row'>
         <Categories
           categoryIndex={category}
           setActiveCategory={onSelectCategory}
@@ -59,7 +60,7 @@ function Home() {
           setSortBy={onSelectSort} />
       </div>
       <h2 className="my-8 text-3xl">Все пиццы</h2>
-      <div className='sm:grid sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4'>
+      <div className='sm:grid sm:grid-cols-2 md-860:grid-cols-3 xl:grid-cols-4'>
         {
           isLoaded
             ? items.map(elem => (<PizzaItem key={elem.id} {...elem} onAddPizza={onAddPizza} count={addedItems[elem.id] ? addedItems[elem.id].items.length : ''} />))
