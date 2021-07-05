@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <>
       <div className='flex justify-between py-4'>
-        <Link to='/' className='flex'>
+        <Link to='/react_pizza' className='flex'>
           <div>
             <img src={logo} className='flex-shrink-0 mt-2 sm-480:mt-4 sm:mt-0' alt='img: logo' />
           </div>

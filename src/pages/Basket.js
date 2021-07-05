@@ -84,7 +84,7 @@ function Basket() {
 
           </div>
           <div className='flex flex-col-reverse items-center justify-center mt-12 sm-480:justify-between sm-480:flex-row'>
-            <Link to='/' className='w-48 mt-2 sm-480:mt-0 border-2 border-[#D3D3D3] flex py-3 rounded-full justify-center group duration-300 hover:border-[#000] items-center'>
+            <Link to='/react_pizza' className='w-48 mt-2 sm-480:mt-0 border-2 border-[#D3D3D3] flex py-3 rounded-full justify-center group duration-300 hover:border-[#000] items-center'>
               <FiChevronLeft stroke="#B6B6B6" className='ml-2 group-hover:stroke-[#000] duration-300' />
               <p className='pr-4 mx-2 text-[#CACACA] group-hover:text-[#000] duration-300'>Вернуться назад</p>
             </Link>
@@ -96,7 +96,7 @@ function Basket() {
             <p className='opacity-50'>Вероятней всего, вы не заказывали ещё пиццу.
               Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
             <img width="300px" src={basket_img} alt='basket: empty' className="my-12" />
-            <Link to='/' className='w-48 bg-[#282828] px-4 py-3 rounded-full duration-300 text-white hover:text-[#FE5F1E] hover:border-1 hover:border-[#FE5F1E]'>Вернуться назад</Link>
+            <Link to='/react_pizza' className='w-48 bg-[#282828] px-4 py-3 rounded-full duration-300 text-white hover:text-[#FE5F1E] hover:border-1 hover:border-[#FE5F1E]'>Вернуться назад</Link>
           </div>
       }
     </div>
