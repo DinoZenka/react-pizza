@@ -30,7 +30,8 @@
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch public/db.json --port 3004",
+    "server": "node server.js",
+    "json-server": "json-server --watch public/db.json --port 3004",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
