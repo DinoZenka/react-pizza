@@ -1,0 +1,125 @@
+@import "../style";
+
+.basket-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-top: 2px solid grey;
+
+  &:last-child {
+    border-bottom: 2px solid grey;
+  }
+
+  &:hover {
+    --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+      0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+      var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  }
+  @include respond-to(sm-480) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+  @include respond-to(sm) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  @include respond-to(md-860) {
+    flex-direction: row;
+  }
+
+  .img-title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include respond-to(sm-480) {
+      width: 20rem;
+      justify-content: start;
+      flex-direction: row;
+    }
+    @include respond-to(md-860) {
+      width: 60%;
+    }
+    .title-container {
+      margin-top: 1rem;
+      margin-left: 0.5rem;
+      text-align: center;
+      @include respond-to(sm-480) {
+        text-align: left;
+        margin-top: 0;
+      }
+      .title {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: bold;
+      }
+      .size {
+        font-weight: 100;
+      }
+    }
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1.5rem;
+    @include respond-to(ph) {
+      justify-content: center;
+    }
+    @include respond-to(md-860) {
+      width: 40%;
+    }
+    @include respond-to(md-860) {
+      margin-top: 0;
+    }
+    .plus-minus-container {
+      display: flex;
+      align-items: center;
+
+      .icon {
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          &.icon-minus {
+            fill: #a7a7a7;
+          }
+          &.icon-plus {
+            fill: #5cb85c;
+          }
+        }
+      }
+      .count {
+        width: 2.5rem;
+        padding: 0 0.5rem;
+        text-align: center;
+      }
+    }
+    .price {
+      font-weight: bold;
+      @include respond-to(sm-480) {
+        margin: 0 3rem;
+      }
+      // @include respond-to(md) {
+      //   margin: 0 0.5rem;
+      // }
+      @include respond-to(ph) {
+        width: 5rem;
+        text-align: center;
+      }
+    }
+    .icon {
+      cursor: pointer;
+      transition: 0.3s;
+      &:hover {
+        &.icon-delete {
+          fill: #292b2c;
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ import { Categories, PizzaItem, PizzaLoader, SortPopup } from '../components';
 import { addPizzaToBasket } from '../redux/actions/basket';
 import { setCategory, setSortBy } from '../redux/actions/filters';
 import { fetchPizzas } from '../redux/actions/pizzas';
-
+import '../css/pages/home.scss';
 
 const categories = [
   'Мясные',
@@ -48,7 +48,7 @@ function Home() {
 
   return (
     <>
-      <div className='flex flex-col justify-between lg-1100:flex-row'>
+      <div className='category-filter-container'>
         <Categories
           categoryIndex={category}
           setActiveCategory={onSelectCategory}
@@ -59,8 +59,8 @@ function Home() {
           availableItems={filters}
           setSortBy={onSelectSort} />
       </div>
-      <h2 className="my-8 text-3xl">Все пиццы</h2>
-      <div className='sm:grid sm:grid-cols-2 md-860:grid-cols-3 xl:grid-cols-4'>
+      <h2 className="all-pizzas-text">Все пиццы</h2>
+      <div className='pizzas-container'>
         {
           isLoaded
             ? items.map(elem => (<PizzaItem key={elem.id} {...elem} onAddPizza={onAddPizza} count={addedItems[elem.id] ? addedItems[elem.id].items.length : ''} />))

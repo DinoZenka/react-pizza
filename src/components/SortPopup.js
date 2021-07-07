@@ -1,5 +1,6 @@
 import { FaCaretDown, FaCaretUp } from 'react-icons/fa'
 import React, { useEffect, useRef, useState } from 'react';
+import '../css/components/sortPopup.scss';
 
 const SortPopup = React.memo((props) => {
   const [visiblePopup, setVisible] = useState(false);
@@ -27,18 +28,18 @@ const SortPopup = React.memo((props) => {
   });
 
   return (
-    <div ref={sertRef} className='relative flex items-center mt-8 w-68 lg-1100:mt-0'>
+    <div ref={sertRef} className='sort-popup'>
       <span >
         {visiblePopup ? <FaCaretDown /> : <FaCaretUp />}
       </span>
-      <p className='ml-1 mr-2'>Сортировка по:</p>
-      <span className="text-[#FE5F1E] border-dotted  border-b-2 border-[#FE5F1E] cursor-pointer" onClick={() => { setVisible(!visiblePopup) }}>{activeItem}</span>
+      <p >Сортировка по:</p>
+      <span className="active-item" onClick={() => { setVisible(!visiblePopup) }}>{activeItem}</span>
       {visiblePopup &&
-        <div className="absolute z-50 top-10 right-4">
-          <ul className="bg-[#fff] py-4 rounded-xl shadow-xl z-10">
+        <div className="items-container">
+          <ul>
             {
               props.availableItems.map((elem, index) => {
-                let clasString = "px-4 py-2 cursor-pointer hover:bg-[#fffbf8] hover:shadow-md relative" + (activeItem === elem.name ? ' text-[#FE5F1E] bg-[#fff0e6]' : '');
+                const clasString = (activeItem === elem.name ? 'active' : '');
 
                 return <li key={elem.name}
                   className={clasString}

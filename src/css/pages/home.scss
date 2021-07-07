@@ -1,0 +1,27 @@
+@import "../style";
+
+.category-filter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include respond-to(lg-1100) {
+    flex-direction: row;
+  }
+}
+.all-pizzas-text {
+  margin: 2rem 0;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+.pizzas-container {
+  @include respond-to(sm) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include respond-to(md-860) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include respond-to(xl) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

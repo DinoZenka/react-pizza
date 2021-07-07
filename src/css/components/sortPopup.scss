@@ -1,0 +1,59 @@
+@import "../style";
+
+.sort-popup {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  width: 17rem;
+  @include respond-to(lg-1100) {
+    margin-top: 0;
+  }
+
+  p {
+    margin-left: 0.25rem;
+    margin-right: 0.5rem;
+  }
+
+  .active-item {
+    color: #{map-get($colors, "dorange")};
+    border-bottom: 2px dotted #{map-get($colors, "dorange")};
+    cursor: pointer;
+  }
+
+  .items-container {
+    position: absolute;
+    z-index: 50;
+    top: 2.5rem;
+    right: 1rem;
+
+    ul {
+      background-color: #fff;
+      padding: 1rem 0;
+      border-radius: 0.75rem;
+      --tw-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+        var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      z-index: 10;
+      li {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        position: relative;
+        border-radius: 0.5rem;
+        &:hover {
+          background: #{map-get($colors, "grey")};
+          --tw-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+            0 2px 4px -1px rgba(0, 0, 0, 0.06);
+          box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
+            var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+          border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        &.active {
+          color: #{map-get($colors, "dorange")};
+          background-color: #{map-get($colors, "grey")};
+        }
+      }
+    }
+  }
+}
