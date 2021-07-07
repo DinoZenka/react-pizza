@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BasketItem } from "../components";
 import { Link } from 'react-router-dom'
 import { FiTrash2, FiShoppingCart, FiChevronLeft } from 'react-icons/fi';
@@ -85,7 +87,7 @@ function Basket() {
 
           </div>
           <div className='basket-footer-container'>
-            <Link to='/react_pizza' className='back-button'>
+            <Link to='/' className='back-button'>
               <FiChevronLeft stroke="#B6B6B6" className='back-img' />
               <p className='back-text'>Вернуться назад</p>
             </Link>
@@ -97,7 +99,7 @@ function Basket() {
             <p className='empty-basket-descr'>Вероятней всего, вы не заказывали ещё пиццу.
               Для того, чтобы заказать пиццу, перейди на главную страницу.</p>
             <img width="300px" src={basket_img} alt='basket: empty' className="empty-basket-image" />
-            <Link to='/react_pizza' className='empty-basket-button'>Вернуться назад</Link>
+            <Link to='/' className='empty-basket-button'>Вернуться назад</Link>
           </div>
       }
     </div>

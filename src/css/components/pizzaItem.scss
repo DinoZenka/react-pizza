@@ -7,6 +7,7 @@
   margin: 1rem 0.5rem;
   text-align: center;
   transition: 0.3s;
+
   &:hover {
     --tw-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
@@ -89,7 +90,8 @@
       font-weight: 500;
       align-items: center;
       background: #fff;
-      height: 3rem;
+      height: 2.7rem;
+      cursor: pointer;
       &.--buy-btn {
         border-radius: 40px;
         border: 2px solid #{map-get($colors, "mdorange")};

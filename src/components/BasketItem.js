@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { BsPlusCircle, BsDashCircle, BsXCircle } from 'react-icons/bs';
 import '../css/components/basketItem.scss';
 

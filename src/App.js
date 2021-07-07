@@ -10,7 +10,7 @@ function App() {
     <div className="content-container">
       <div className="content">
         <Header />
-        <Route exact path='/react_pizza' component={Home} />
+        <Route exact path='/' component={Home} />
         <Route exact path='/basket' component={Basket} />
       </div>
     </div>

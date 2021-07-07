@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { Link } from 'react-router-dom';
 // import basket from '../assets/basket-icon.svg';
 import { FiShoppingCart } from 'react-icons/fi';

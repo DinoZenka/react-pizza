@@ -9,7 +9,7 @@
 
 body {
   background-color: #ffdf8c;
-  margin-top: 2.5rem;
+  margin: 2.5rem 0;
 }
 
 .content-container {
@@ -22,6 +22,7 @@ body {
   margin: 0 auto;
   background-color: #fff;
   border-radius: 40px;
+  padding-bottom: 2rem;
   @include respond-to(sm-480) {
     padding: 0 2rem;
   }

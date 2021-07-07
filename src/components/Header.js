@@ -1,3 +1,4 @@
+import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../assets/logo.png';
@@ -13,7 +14,7 @@ const Header = () => {
   return (
     <>
       <div className='header'>
-        <Link to='/react_pizza'>
+        <Link to='/'>
           <div>
             {/* className='flex-shrink-0 mt-2 sm-480:mt-4 sm:mt-0' */}
             <img src={logo} alt='img: logo' />
